@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/48c0c97828.js" crossorigin="anonymous"></script>" crossorigin="anonymous"> </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src ="logocris (1).jpeg" class="logo">
+                <ul id=" sidemenu">
+                    <li><a href="#header">Apresentação</a></li>
+                    <li><a href="#about"> Formação</a></li>
+                    <li><a href="#services"> Serviços</a></li>
+                    <li><a href="#contact"> Contactos</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Desenvolvedora Front-End </p>
+                <h1> Olá, eu sou <span>Cristina</span><br> Angolana.</h1>
+
+            </div>
+        </div>
+    </div>
+
+    <!----------Sobre------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class=" about-col-1">
+                <img src="cris.jpg">
+            </div>
+                <div class=" about-col-2">
+                   
+                    <h1 class="sub-title"> Formação </h1>
+                        <p> Aqui você encontra aspectos realcionados a minha formação academica. </p>
+                <div class="tab-titles">
+                 <p class="tab-links active-link" onclick="opentab( 'skills')">Habilidades </p>
+                 <p class="tab-links" onclick="opentab( 'experiencias')"> Experiências</p>
+                 <p class="tab-links" onclick="opentab('educacion')"> Educação </p>    
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li> <span> Toti </span><br>Desenvolvedora Front-End </li>
+                        <li> <span> UNILAB </span><br> Agronomia </li>
+                        
+                    </ul>
+
+                </div>
+                <div class="tab-contents" id="experiencias">
+                    <ul>
+                        <li> <span> </span><br> </li>
+                        <li> <span></span></li>
+                        <li> <span> </span><br> 
+
+                </div>
+                <div class="tab-contents active-tab" id="educacion">
+                    <ul>
+                        <li> <span>2022 - corrente</span><br> Curso Front-End </li>
+                        <li> <span>  2018 - 2022</span><br> Curso de Agronomia </li>
+                        <li> <span> 2014-2018</span><br>  Curso Técnico de controle de Qualidade</li>
+                    </ul> </li>
+                    </ul>
+
+                </div>
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+
+    <!--------- serviços--------->
+    <div id="services">
+        <div class=" container"></div>
+        <h1 class="sub-title"> Meus serviços  </h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2> Conhecimentos de <br>Gerenciamento de projetos </h2>
+                <p> </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2> Habilidades com <br> Html e Css</h2>
+                <p> </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Habilidades com <br> JavaScript</h2>
+                <p> </p>
+                <a href="#">learn more</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!----------contactos--------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left"></div>
+                <h1 class="sub-title"> Entre em contacto </h1>
+                <p><i class="fa-solid fa-paper-plane"></i> contact@exemple.com</p>
+                <p><i class="fa-solid fa-phone"></i> 039746526</p>
+                <div class="social-icons">
+                        <a href="https://facebook.com/ "><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/"><i class="fa-brands fa-git"></i></i></a>
+                </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet"> 
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="your Email" required>
+                            <textarea name="Message" rows="6"  placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Enviar</button>        
+                    </form>
+                    <span id="msg"> Mensagem enviada </span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> copyright ©Cris. Feito por <i class="fa-solid fa-heart"></i> Cristina Saka</p>
+        </div>
+    </div>
+
+   
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyeza_4pVzLiz5fqrINwlficW3eZeOmw-JDniXZtuPR/dev'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Meensagem enviada"
+                setTimeout = ""
+            },5000)
+            form.reset()
+
+            
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+
+
+    
+</body>
+</html>

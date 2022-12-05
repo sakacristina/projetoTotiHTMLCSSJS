@@ -1,0 +1,420 @@
+
+/*----informações do tamanho da pagina-----*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+/*----informações da cor de fundo da pagina-----*/
+
+body{
+    background: black;
+    color:#fff;
+}
+
+/*---- Imagem em tamanho grande-----*/
+#header{
+    width: 100vh;
+    height: 100vh;
+    background-image: url(1.jpeg);
+    background-size: cover;
+    background-position: center ;
+    flex-wrap: wrap;
+    
+  
+}
+
+/*---- AfastAR a logo e as letras de APRESENTAÇÃO das margens da pagina-----*/
+.container{
+    padding: 10px 10%; 
+
+}
+/*---- Colococar as apresentações e a logo separadas a esquerda e direita-----*/
+ nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+/*---- Alterou-se o tamanho da logo-----*/
+.logo{
+    width: 140px;
+}
+
+/*---- Organizou-se em fila as apresentações-----*/
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+/*----mudou-se a cor e o tamnho das letras das apresentações-----*/
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+
+/*----colocou-se sublinhado em baixo das apresentações e acor do sublinhado-----*/
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+/*----aumentou-se sublinhado e aparecer apenas qdo clicar e acor do sublinhado-----*/
+nav ul li a:hover::after{
+  
+    width: 100%;
+}
+/*------ trabalho com toda a div------*/
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+/*------ trabalho apenas com o paragrafo------*/
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+/*------ vamos editar a palavra que metemos em span <CRISTINA> ------*/
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/*------ SOBRE ------*/
+/*------ vamos afastar a imagem da margem-----*/
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+/*------ editar a posição de toda a classe row ------*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:  wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+
+}
+/*------ vamos editar a imagem e mudar as bordas------*/
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+/*------ vamos editar a frase sobre mim ------*/
+
+.about-col-2{
+    flex-basis:60%;
+
+}
+
+
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+
+/*------ editando toda a div class tab titles------*/
+
+.tab-titles{
+    display: flex;
+    margin: 20px 40px;
+
+}
+
+/*------ Agora editando especificamente os links dando espaço e aumentando a fonte------*/
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18x;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+/*------ colocamos novamente o sublinhado colorido ------*/
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom:-8px ;
+    transition: 0,5s;
+}
+/*------ Queremos ativar na primeira palavra Skills o sublinhado ja aparecendo por isso aumentamos um nome la na classe de skills no html ------*/
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+/*------ uma lista com as informações das formações e habilidades ------*/
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+
+/*------ editar as informações que estão dentro da span, por exemplo mudar a cor para destacar ------*/
+
+.tab-contents ul li span{
+    color:#b54769 ;
+    font-size: 14px;
+}
+
+/*------escondemos as outras informações mas vamos deixar a priemira activa ------*/
+.tab-contents{
+    display: none;
+}
+
+
+/*------ vamos deiar apenas as primeiras informações disponiveis e visiveis por isso colocamos na priemira div de tab-contents a palavra active tab ------*/
+.tab-contents.active-tab{
+    display: block;
+
+}
+
+/*------ serviços------*/
+
+.services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5,transform 0.5s;
+}
+
+colocar os icones dentro do quDRADO CINZA
+
+.services-list div i{
+    font-size: 50PX;
+    margin-bottom: 30PX;
+
+}
+/*------ demos uma mudança nas letras ------*/
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+ demos uma mudança no item lern more
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/*---------vamos colocar uma cor qdo o rato etiver em cima do box-----*/
+.services-list div:hover{
+        background: #ff004f;
+        transform: translateY(-10px);
+
+}
+
+/*---------contactos----------*/
+
+
+/*---------vamos editar toda a section----------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+/*---------agora só os paragrafos----------*/
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-righ form{
+    width: 100%;
+}
+
+.form input, form textarea{
+    width: 100%;
+    border:0;
+    outline:none ;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626; 
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i{
+    color: #ff004f;
+}
+
+/*------------------css responsividade--------*/
+
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-widht: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+
+
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute ;
+        top: 25px;
+        left:25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 8px;
+        margin-right: 10px;
+    }
+    .contact-left, .contact-righ{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 5px;
+    }
+}
+
+#msg{
+    color: #ff004f;
+    margin-top: -40px;
+    display: block;
+}
+
+
+
+
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,35 +77,6 @@
         </div>
     </div>
 
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link")
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-
 
     <!--------- serviços--------->
     <div id="services">
@@ -148,17 +119,33 @@
                         <a href="https://github.com/"><i class="fa-brands fa-git"></i></i></a>
                 </div>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet"> 
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="your Email" required>
-                            <textarea name="Message" rows="6"  placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Enviar</button>        
+              
+                          <!----------REGISTRO---------> 
+                <div class="container">
+                    <form id="form" action="/">
+                        <h1>Entre em contacto</h1>
+                        <div class="input-control">
+                            <label for="username">Nome de usuário</label>
+                            <input id="username" name="username" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="text">
+                            <div class="error"></div>
+                        </div>
+                        
+                        <div class="message">Mensagem</div>
+                        <textarea name="mensagem" id="mensagem"  cols="30" rows="10" placeholder="Escreva aqui a sua mensagem"></textarea>
+                        <button type="submit">Sign Up</button>
                     </form>
-                    <span id="msg"> Mensagem enviada </span>
                 </div>
+            </body>
+            </html>       
+                    
+               
             </div>
-        </div>
+        </div>*/
         <div class="copyright">
             <p> copyright ©Cris. Feito por <i class="fa-solid fa-heart"></i> Cristina Saka</p>
         </div>
@@ -166,23 +153,7 @@
 
    
       
-      <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyeza_4pVzLiz5fqrINwlficW3eZeOmw-JDniXZtuPR/dev'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Meensagem enviada"
-                setTimeout = ""
-            },5000)
-            form.reset()
-
-            
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    <script src="script.js"></script>
 
 
 
